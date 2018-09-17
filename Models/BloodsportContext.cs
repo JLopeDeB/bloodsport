@@ -166,10 +166,6 @@ namespace BloodsportApi.Models
                     .HasColumnName("dni")
                     .HasColumnType("int(11)");
 
-                entity.Property(e => e.Edad)
-                    .HasColumnName("edad")
-                    .HasColumnType("int(11)");
-
                 entity.Property(e => e.FechaCreacion)
                     .HasColumnName("fecha_creacion")
                     .HasColumnType("timestamp")
