@@ -17,7 +17,6 @@ namespace BloodsportApi.Models
         public int? Dni { get; set; }
         public DateTime? FechaNacimiento { get; set; }
         public int? IdProfesionalCabecera { get; set; }
-        public int? Edad { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime? FechaModificacion { get; set; }
 
