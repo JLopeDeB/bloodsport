@@ -37,6 +37,9 @@ namespace BloodsportApi
                     }
             ));
 
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                            .AllowAnyMethod()
+                                                                            .AllowAnyHeader()));  
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -54,7 +57,10 @@ namespace BloodsportApi
                 app.UseHsts();
             }
 
+            app.UseCors("AllowAll");
+
             app.UseHttpsRedirection();
+
             app.UseMvc();
         }
     }
