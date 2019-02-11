@@ -30,10 +30,10 @@ namespace BloodsportApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContextPool<BloodsportContext>( // replace "YourDbContext" with the class name of your DbContext
-                options => options.UseMySql("Server=localhost;Database=bloodsport;User=root;Password=password;", // replace with your Connection String
+                options => options.UseMySql("Server=localhost;Database=bloodsport;User=bloodsport;Password=JCVD987!;", // replace with your Connection String
                     mysqlOptions =>
                     {
-                        mysqlOptions.ServerVersion(new Version(8, 0, 12), ServerType.MySql); // replace with your Server Version and Type
+                        mysqlOptions.ServerVersion(new Version(8, 0, 15), ServerType.MySql); // replace with your Server Version and Type
                     }
             ));
 
